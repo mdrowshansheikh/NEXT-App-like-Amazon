@@ -1,4 +1,4 @@
-# NEXT Js Ecommers App like Amazon
+# Next Js Ecommers App like Amazon
 
 ## Author Md Rowshan Sheikh
 
