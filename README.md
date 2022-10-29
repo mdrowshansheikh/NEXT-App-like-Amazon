@@ -1,5 +1,7 @@
 # NEXT Js Ecommers App like Amazon
 
+## Author Md Rowshan Sheikh
+
 ## Getting Started
 
 First, run the development server:
