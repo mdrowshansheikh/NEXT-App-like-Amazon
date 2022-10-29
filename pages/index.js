@@ -10,7 +10,8 @@ export default function Home() {
       </Head>
 
       <div>
-        <h1 className="bg-blue-400 p-2 ">Bismillah</h1>
+        <h1 className="bg-blue-400 p-2 ">Amar Arifa tumi koi</h1>
+        <h2>Ami Rohan</h2>
       </div>
     </div>
   );
