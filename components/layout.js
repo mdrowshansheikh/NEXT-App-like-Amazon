@@ -11,15 +11,17 @@ const Layout = ({ title, children }) => {
       <div className="flex min-h-screen flex-col justify-between">
         <header>
           <nav className="flex h-12 justify-between items-center px-4 shadow-md">
-            <Link href={'/'}>
-              <span className="font-lg  font-bold">amazona</span>
+            <Link legacyBehavior href={'/'}>
+              <a legas className="font-lg  font-bold">
+                amazona
+              </a>
             </Link>
             <div>
-              <Link href={'/cart'}>
-                <span className="p-2">Cart</span>
+              <Link legacyBehavior href={'/cart'}>
+                <a className="p-2">Cart</a>
               </Link>
-              <Link href={'/login'}>
-                <span className="p-2">Login</span>
+              <Link legacyBehavior href={'/login'}>
+                <a className="p-2">Login</a>
               </Link>
             </div>
           </nav>
