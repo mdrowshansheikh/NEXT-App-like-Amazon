@@ -4,8 +4,12 @@ import data from '../../utils/data';
 import Layout from '../../components/layout';
 import Link from 'next/link';
 import Image from 'next/image';
+import { Store } from '../../utils/Store';
+import { useContext } from 'react';
 
 const ProductScreen = () => {
+  const { state, dispatch } = useContext(Store);
+
   const { query } = useRouter();
   const { slug } = query;
   const product = data.products.find((x) => x.slug === slug);
@@ -13,6 +17,22 @@ const ProductScreen = () => {
   if (!product) {
     <div>Product Not Found</div>;
   }
+
+  // adding card counter functionality ===========>
+  const addToCardHandeler = () => {
+    const existItem = state.cart.cartItems.find(
+      (item) => item.slug === product.slug
+    );
+    const quantity = existItem ? existItem.quantity + 1 : 1;
+    if (product.countInStock < quantity) {
+      alert('Sorry. Product is out of stock!');
+      return;
+    }
+
+    dispatch({ type: 'CART_ADD_ITEM', payload: { ...product, quantity } });
+  };
+
+  // Done ========================= end
   return (
     <Layout title={product.name}>
       <div className="py-2">
@@ -51,7 +71,12 @@ const ProductScreen = () => {
               <div>Status</div>
               <div>{product.countInStock > 0 ? 'In stock' : 'Unavailable'}</div>
             </div>
-            <button className="primary-button w-full">Add to cart</button>
+            <button
+              className="primary-button w-full"
+              onClick={addToCardHandeler}
+            >
+              Add to cart
+            </button>
           </div>
         </div>
       </div>

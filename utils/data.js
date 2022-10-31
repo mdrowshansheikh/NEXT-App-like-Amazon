@@ -9,7 +9,7 @@ const data = {
       brand: 'Nike',
       rating: 4.5,
       numReviews: 8,
-      countInStock: 20,
+      countInStock: 10,
       description: 'A popular shirt',
     },
     {
@@ -33,7 +33,7 @@ const data = {
       brand: 'Raymond',
       rating: 4.5,
       numReviews: 3,
-      countInStock: 20,
+      countInStock: 10,
       description: 'A popular shirt',
     },
     {
@@ -57,7 +57,7 @@ const data = {
       brand: 'Zara',
       rating: 3.5,
       numReviews: 7,
-      countInStock: 20,
+      countInStock: 4,
       description: 'A popular pants',
     },
     {
@@ -69,7 +69,7 @@ const data = {
       brand: 'Casely',
       rating: 2.4,
       numReviews: 14,
-      countInStock: 20,
+      countInStock: 7,
       description: 'A popular pants',
     },
   ],
