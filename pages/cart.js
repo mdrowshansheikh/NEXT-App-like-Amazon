@@ -5,6 +5,7 @@ import Layout from '../components/layout';
 import { Store } from '../utils/Store';
 import { GrClose } from 'react-icons/gr';
 import { useRouter } from 'next/router';
+import dynamic from 'next/dynamic';
 
 const CartScreen = () => {
   const router = useRouter();
@@ -95,7 +96,7 @@ const CartScreen = () => {
               </li>
               <li>
                 <button
-                  onClick={() => router.push('/shipping')}
+                  onClick={() => router.push('login?redirect=/shipping')}
                   className=" primary-button w-full"
                 >
                   Check Out
@@ -109,4 +110,4 @@ const CartScreen = () => {
   );
 };
 
-export default CartScreen;
+export default dynamic(() => Promise.resolve(CartScreen), { ssr: false });

@@ -1,10 +1,16 @@
 import Head from 'next/head';
 import Link from 'next/link';
-import { useContext } from 'react';
+import { useContext, useEffect, useState } from 'react';
 import { Store } from '../utils/Store';
+
 const Layout = ({ title, children }) => {
-  const { state, dispatch } = useContext(Store);
+  const { state } = useContext(Store);
   const { cart } = state;
+
+  const [cartItemsCount, setcartItemsCount] = useState(0);
+  useEffect(() => {
+    setcartItemsCount(cart.cartItems.reduce((a, c) => a + c.quantity, 0));
+  }, [cart.cartItems]);
 
   return (
     <>
@@ -25,9 +31,9 @@ const Layout = ({ title, children }) => {
               <Link legacyBehavior href={'/cart'}>
                 <a className="p-2">
                   Cart
-                  {cart.cartItems.length > 0 && (
+                  {cartItemsCount > 0 && (
                     <span className="ml-1 rounded-full bg-red-600 px-2 py0q text-xs font-bold text-white">
-                      {cart.cartItems.reduce((a, c) => a + c.quantity, 0)}
+                      {cartItemsCount}
                     </span>
                   )}
                 </a>
