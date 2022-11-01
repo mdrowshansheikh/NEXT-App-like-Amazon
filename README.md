@@ -4,7 +4,7 @@
 
 Build ECommerce Website Like Amazon by Next.js
 
-- Source Code    :  https://github.com/basir/next-amazona
+- Source Code    :https://github.com/mdrowshansheikh
 - Demo Website :  https://nextjs-amazona-final.vercel.app
 
 ## What you will learn
@@ -20,8 +20,8 @@ Build ECommerce Website Like Amazon by Next.js
 
 ## Full Course
 
-Learn building this ecommerce website on Udemy with 90% discount:
-https://www.udemy.com/course/nextjs-ecommerce
+Learn building this ecommerce website on:
+youtub rowshan prject school
 
 ## Run it Locally
 
